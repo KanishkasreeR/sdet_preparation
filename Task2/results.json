@@ -1,0 +1,12 @@
+[
+    {
+        "name": "Poorani",
+        "email": "pooranip927@gmail.com",
+        "valid": true
+    },
+    {
+        "name": "Ramesh",
+        "email": "mramesh@gmail",
+        "valid": false
+    }
+]
