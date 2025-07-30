@@ -1,8 +1,8 @@
 import json
-from test_user import TestUser
+from Task2.user import User
 from functions import read_test_data_from_json
 
-class TestDataManager:
+class DataManager:
     def __init__(self, file_path):
         self.file_path = file_path
 
@@ -16,7 +16,7 @@ class TestDataManager:
                 email = user['email']
                 password = user['password']
 
-                new_user = TestUser(name, email, password)
+                new_user = User(name, email, password)
                 users.append(new_user)
 
         return users

@@ -2,7 +2,7 @@ import random
 import string
 from functions import validate_email_format
 
-class TestUser:
+class User:
     def __init__(self, name, email, password):
         self.name = name
         self.email = email

@@ -1,6 +1,6 @@
 import requests
-from test_user import TestUser
-from test_data_manager import TestDataManager
+from Task2.user import User
+from Task2.data_manager import DataManager
 
 def create_test_user_data():
     return {
@@ -33,7 +33,7 @@ if __name__ == "__main__":
     print("Test User Data:", user_data)
 
     print("\nGenerating a random user: ")
-    random_user = TestUser.generate_random_user()
+    random_user = User.generate_random_user()
     print("Random User:")
     print("Name:", random_user.name)
     print("Email:", random_user.email)
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     print("Is Valid Email?", random_user.is_valid())
 
     print("\nLoading users from 'sample.json':")
-    data_manager = TestDataManager("sample.json")
+    data_manager = DataManager("sample.json")
     users = data_manager.load_test_users()
 
     print("\nChecking if users are valid: ")
