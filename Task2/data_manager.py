@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import json
 from Task2.user import User
 from functions import read_test_data_from_json
@@ -10,14 +13,13 @@ class DataManager:
         data = read_test_data_from_json(self.file_path)
         users = []
 
-        if data:
-            for user in data:
-                name = user['name']
-                email = user['email']
-                password = user['password']
+        for user in data:
+            name = user['name']
+            email = user['email']
+            password = user['password']
 
-                new_user = User(name, email, password)
-                users.append(new_user)
+            new_user = User(name, email, password)
+            users.append(new_user)
 
         return users
 

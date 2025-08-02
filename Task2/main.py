@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import requests
 from Task2.user import User
 from Task2.data_manager import DataManager
@@ -41,7 +44,7 @@ if __name__ == "__main__":
     print("Is Valid Email?", random_user.is_valid())
 
     print("\nLoading users from 'sample.json':")
-    data_manager = DataManager("sample.json")
+    data_manager = DataManager("C:\sdet_preparation\Task2\sample.json")
     users = data_manager.load_test_users()
 
     print("\nChecking if users are valid: ")
